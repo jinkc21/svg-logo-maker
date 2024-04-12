@@ -7,6 +7,14 @@ const questions = [
     type: "input",
     message: "What is the text for the logo? (1-3 characters required)",
     name: "logoText",
+    validate: logoTextInput => {
+      if (logoTextInput) {
+          return true;
+      } else {
+          console.log('Logo text is required!');
+          return false;
+      }
+  }
   },
   {
     type: "list",
