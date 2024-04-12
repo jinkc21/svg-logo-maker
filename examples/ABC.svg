@@ -1,0 +1,6 @@
+
+    <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+ <path d="M300 240h-300l150-220z" fill="orange" /> 
+       <text text-anchor="middle" x="150" y="200" font-size="4em" fill="red">ABC</text>
+</svg>
+    
