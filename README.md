@@ -29,6 +29,9 @@ Run node index.js in the terminal. A set of questions will prompt.
 After user inputs are received, and new SVG file is created with the custom logo.
 ![sample](assets/sample.png)
 
+For help running the application, a tutorial has been provided.
+https://drive.google.com/file/d/1D88A5O1MpYo3gb2iwVnaRZBFOvXb3BJF/view
+
 ## Credits
 
 Many SVG tutorials and resources were used to write this project. 
