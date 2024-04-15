@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateShapes = require("./lib/shapes.js");
+const generateLogo = require("./lib/logo.js");
 
 const questions = [
   {
@@ -50,7 +50,7 @@ function init() {
     .prompt(questions)
     .then(function (data) {
       console.log(data);
-      let result = generateShapes(data);
+      let result = generateLogo(data);
       // console.log('Results: ', result);
       let renderLicense = writeToFile(`./examples/${data.logoText}.svg`, result);
     })
