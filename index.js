@@ -1,7 +1,9 @@
+// require dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateLogo = require("./lib/logo.js");
 
+// question prompts to create logo
 const questions = [
   {
     type: "input",
@@ -36,6 +38,7 @@ const questions = [
   },
 ];
 
+// function to write file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, function (error) {
     if (error) {
@@ -45,16 +48,17 @@ function writeToFile(fileName, data) {
   });
 }
 
+//  function for inquirer to prompt questions and generate logo
 function init() {
   inquirer
-    .prompt(questions)
-    .then(function (data) {
-      console.log(data);
-      let result = generateLogo(data);
-      // console.log('Results: ', result);
-      let renderLicense = writeToFile(`./examples/${data.logoText}.svg`, result);
-    })
-    .catch((error) => {
+  .prompt(questions)
+  .then(function (data) {
+    console.log(data);
+    let result = generateLogo(data);
+    // console.log('Results: ', result);
+    let renderLicense = writeToFile(`./examples/${data.logoText}.svg`, result);
+  })
+  .catch((error) => {
       console.log(error);
     });
 }
